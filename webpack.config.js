@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title: "Template",
+      title: "What's The Weather?",
       favicon: "./src/images/favicon.png",
       template: "./src/index.html",
       filename: "./index.html", // relative to root of the application
