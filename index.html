@@ -3,9 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What's The Weather?</title>
-  <link rel="icon" href="favicon.png?7c875344f2ffc5da98c7"><script defer src="main.js?7c875344f2ffc5da98c7"></script></head>
+    <title>the.weather</title>
+  <link rel="icon" href="favicon.png?0a1b7c0fc2088cdf3e87"><script defer src="main.js?0a1b7c0fc2088cdf3e87"></script></head>
   <body>
-    <h1>Template</h1>
+    <section class="layout">
+      <div class="section" id="header">
+        <div class="page-text">the weather</div>
+        <div class="dropdown-container">
+          <button class="dropdown-button" id="dropdown-button"></button>
+          <div
+            class="dropdown-content-container hidden"
+            id="dropdown-content-container"
+          >
+            <div class="form-container-container">
+              <form id="new-query-form">
+                <div class="form-item">
+                  <input
+                    type="text"
+                    id="query"
+                    name="query"
+                    placeholder="Another location"
+                    required
+                  />
+                </div>
+              </form>
+              <button type="button" id="submit-button" class="button">
+                Search
+              </button>
+            </div>
+            <div class="links-container">
+              <a class="new-york" href="#">New York</a>
+              <a class="rome" href="#">Rome</a>
+              <a class="california" href="#">California</a>
+            </div>
+            <div class="advanced-section">
+              <h3 class="advanced-details">Weather Details:</h3>
+              <div class="advanced-info-section"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="body">
+        <div class="current-info-section"></div>
+      </div>
+    </section>
   </body>
 </html>
