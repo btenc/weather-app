@@ -6,6 +6,46 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <h1>Template</h1>
+    <section class="layout">
+      <div class="section" id="header">
+        <div class="page-text">the weather</div>
+        <div class="dropdown-container">
+          <button class="dropdown-button" id="dropdown-button"></button>
+          <div
+            class="dropdown-content-container hidden"
+            id="dropdown-content-container"
+          >
+            <div class="form-container-container">
+              <form id="new-query-form">
+                <div class="form-item">
+                  <input
+                    type="text"
+                    id="query"
+                    name="query"
+                    placeholder="Another location"
+                    required
+                  />
+                </div>
+              </form>
+              <button type="button" id="submit-button" class="button">
+                Search
+              </button>
+            </div>
+            <div class="links-container">
+              <a class="new-york" href="#">New York</a>
+              <a class="rome" href="#">Rome</a>
+              <a class="california" href="#">California</a>
+            </div>
+            <div class="advanced-section">
+              <h3 class="advanced-details">Weather Details:</h3>
+              <div class="advanced-info-section"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="body">
+        <div class="current-info-section"></div>
+      </div>
+    </section>
   </body>
 </html>

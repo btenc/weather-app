@@ -1,6 +1,7 @@
 import "normalize.css";
 import "./style.css";
-import { updateLocation, locationData } from "./modules/weatherapi";
+import updateDisplay from "./modules/interface";
+import dropDownInit from "./modules/drop-down";
 
-await updateLocation("Cresskill");
-console.log(locationData);
+dropDownInit("dropdown-button", "dropdown-content-container", "hidden");
+updateDisplay("Rome");

@@ -5,8 +5,79 @@
   font-style: normal;
 }
 
-h1 {
-  font-family: "MyFont";
-  background: url(./images/favicon.png);
-  color: blue;
+/*DROP DOWN STYLING*/
+.dropdown-button {
+  position: relative;
+  left: 70%;
+  background-color: #3498db;
+  color: white;
+  padding: 80px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+  background-color: #2980b9;
+}
+
+.dropdown-container {
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40vw;
+  height: 100vh;
+  display: inline-block;
+}
+
+.dropdown-container-container {
+  width: 60vw;
+  background-color: black;
+}
+
+.dropdown-content-container {
+  top: 0%;
+  position: relative;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content-container a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-container a:hover {
+  background-color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+/*DROP DOWN STYLING END*/
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+
+  background-color: lightblue;
+}
+
+#header,
+#body {
+  padding: 10px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
 }
