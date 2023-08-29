@@ -103,6 +103,7 @@ h4.advanced-details {
 
 #header {
   padding: 70px;
+  padding-bottom: 0px;
   display: flex;
   justify-content: space-between;
 }
