@@ -1,83 +1,196 @@
 @font-face {
-  font-family: "MyFont";
-  src: url("./fonts/my-font.woff") format("woff");
+  font-family: "OpenSans";
+  src: url("./fonts/opensans-bold.woff") format("woff");
+  src: url("./fonts/opensans-bold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 
-/*DROP DOWN STYLING*/
-.dropdown-button {
-  position: relative;
-  left: 70%;
-  background-color: #3498db;
+body {
   color: white;
-  padding: 80px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+  text-shadow: -0.7px 0 black, 0 0.7px black, 0.7px 0 black, 0 -0.7px black;
+  background-image: url(images/bg.png);
+  font-family: "OpenSans", sans-serif;
 }
 
-.dropdown-button:hover,
-.dropdown-button:focus {
-  background-color: #2980b9;
-}
-
-.dropdown-container {
-  padding-left: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40vw;
-  height: 100vh;
-  display: inline-block;
-}
-
-.dropdown-container-container {
-  width: 60vw;
-  background-color: black;
-}
-
-.dropdown-content-container {
-  top: 0%;
-  position: relative;
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown-content-container a {
-  color: black;
-  padding: 12px 16px;
+a {
+  color: rgb(189, 189, 189);
   text-decoration: none;
-  display: block;
 }
 
-.dropdown-content-container a:hover {
-  background-color: #ddd;
+a:hover {
+  color: white;
 }
 
-.hidden {
-  display: none;
+input[type="text"] {
+  color: white;
+  height: 2.3rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: rgb(189, 189, 189);
+  background: transparent;
 }
-/*DROP DOWN STYLING END*/
 
-.layout {
+input::placeholder {
+  color: rgb(189, 189, 189);
+}
+
+#submit-button {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: white;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  padding: 2px 24px;
+  max-width: 350px;
+}
+
+#submit-button:hover {
+  background: #174ea6;
+  color: white;
+}
+
+#new-query-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+h4.advanced-details {
+  color: white;
+  margin-bottom: 70px;
+}
+
+.advanced-info-section > div {
+  display: flex;
+  gap: 20px;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.advanced-info-section > div > h4:nth-child(2) {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.page-text {
+  font-size: 3.5rem;
+}
+
+#layout {
   width: 100vw;
   height: 100vh;
 
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr;
-
-  background-color: lightblue;
-}
-
-#header,
-#body {
-  padding: 10px;
+  grid-template-columns: 1fr 0.5fr;
 }
 
 #header {
+  padding: 70px;
   display: flex;
   justify-content: space-between;
+}
+
+#body {
+  grid-row-start: 2;
+}
+
+#right-bar {
+  padding: 35px;
+  background-color: rgba(0, 0, 0, 0.3);
+  grid-row-start: 1;
+  grid-row-end: -1;
+  grid-column-start: 2;
+}
+
+.stats-container {
+  font-size: 1.5rem;
+  color: rgb(189, 189, 189);
+  opacity: 0.9;
+  text-shadow: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-around;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+}
+
+.divider {
+  border: 1px solid rgb(189, 189, 189);
+  background-color: rgb(189, 189, 189);
+  height: 1px;
+  border-radius: 99rem;
+}
+
+.current-info-section {
+  font-size: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-temp {
+  font-size: 10rem;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.info-container:has(.current-condition) {
+  flex-direction: row;
+  align-items: center;
+}
+
+.condition-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.location,
+.date {
+  margin: 2px;
+}
+
+.location {
+  font-size: 5rem;
+}
+
+#body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  margin-left: 20px;
 }

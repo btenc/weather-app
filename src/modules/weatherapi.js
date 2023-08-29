@@ -27,6 +27,7 @@ class Location {
     this.rain = rain;
     this.celsius = false;
     this.date = "Date not set";
+    this.icon = "N/A";
   }
 
   setDate() {
@@ -48,6 +49,7 @@ async function updateLocation(query) {
       { mode: "cors" }
     );
     await response.json().then((data) => {
+      console.log(data);
       locationData.name = data.location.name;
       locationData.region = data.location.region;
       locationData.country = data.location.country;
@@ -55,6 +57,7 @@ async function updateLocation(query) {
       locationData.windDirection = data.current.wind_dir;
       locationData.uv = data.current.uv;
       locationData.humidity = data.current.humidity;
+      locationData.icon = data.current.condition.icon;
       if (locationData.celsius === true) {
         locationData.temp = data.current.temp_c;
         locationData.wind = data.current.wind_kph;
