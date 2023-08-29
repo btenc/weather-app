@@ -1,3 +1,5 @@
 # Weather App
 
-Live: coming soon
+Live: https://btenc.github.io/weather-app/
+
+Todo: Add celsius toggle
