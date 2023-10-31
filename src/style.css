@@ -64,7 +64,6 @@ input::placeholder {
 }
 
 #new-query-form {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -73,10 +72,12 @@ input::placeholder {
 
 h4.advanced-details {
   color: white;
+  margin-top: 0;
 }
 
 .advanced-detail {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .advanced-info-section > div {
@@ -89,7 +90,7 @@ h4.advanced-details {
 .advanced-info-section {
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 4vh;
 }
 
 .advanced-info-section > div > h4:nth-child(2) {
@@ -130,6 +131,7 @@ h4.advanced-details {
 }
 
 .stats-container {
+  margin: 10px;
   font-size: 1.5rem;
   color: rgb(189, 189, 189);
   opacity: 0.9;
@@ -150,13 +152,14 @@ h4.advanced-details {
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 8vh;
+  gap: 4vh;
 }
 
 .divider {
   border: 1px solid rgb(189, 189, 189);
   background-color: rgb(189, 189, 189);
   height: 1px;
+  margin: 10px;
   border-radius: 99rem;
 }
 
