@@ -73,7 +73,10 @@ input::placeholder {
 
 h4.advanced-details {
   color: white;
-  margin-bottom: 70px;
+}
+
+.advanced-detail {
+  margin-top: 0;
 }
 
 .advanced-info-section > div {
@@ -81,6 +84,12 @@ h4.advanced-details {
   gap: 20px;
   text-align: left;
   justify-content: space-between;
+}
+
+.advanced-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
 }
 
 .advanced-info-section > div > h4:nth-child(2) {
@@ -128,8 +137,14 @@ h4.advanced-details {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 1vh;
   justify-content: space-around;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .links-container {
