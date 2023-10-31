@@ -189,11 +189,12 @@ h4.advanced-details {
 
 .info-container:has(.current-condition) {
   flex-direction: row;
+  position: relative;
 }
 
 .condition-icon {
-  position: relative;
-  right: 25px;
+  position: absolute;
+  right: -70px;
   top: 15px;
   width: 100px;
   height: 100px;
